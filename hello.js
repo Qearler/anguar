@@ -50,7 +50,7 @@ myApp.run(['$rootScope', '$log','$state', '$transitions', function ($rootScope, 
 
   $transitions.onSuccess({}, function(transition) {
     console.log(window.location.href);
-    _hmt && _hmt.push(['_trackPageview', '/new/path/new/name']);
+    _hmt && _hmt.push(['_trackPageview', '/#' + '/new/path/new/name']);
     // URL必须是以"/"（斜杠）开头的相对路径, 如果是hash模式, 要在前面加 /#
     // _hmt && _hmt.push(['_trackPageview', '/#' + to.fullPath]);
     // console.log(transition);
@@ -60,37 +60,4 @@ myApp.run(['$rootScope', '$log','$state', '$transitions', function ($rootScope, 
     //     " to " + transition.to().name
     // );
   });
-
-	$rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-		$log.debug('successfully changed states') ;
- 
-		$log.debug('event', event);
-		$log.debug('toState', toState);
-		$log.debug('toParams', toParams);
-		$log.debug('fromState', fromState);
-    $log.debug('fromParams', fromParams);
-    
-    
-
-    console.log('event', event);
-		console.log('toState', toState);
-		console.log('toParams', toParams);
-		console.log('fromState', fromState);
-    console.log('fromParams', fromParams);
-	});
- 
-	$rootScope.$on('$stateNotFound', function (evt, next, current) {
-		// write callback here
-		//alert("$stateNotFound");
-		console.log("$stateNotFound");
-	});
- 
-	$rootScope.$on('$stateChangeError', function (current, previous, rejection) {
-		//alert("error");
-	});
- 
-	//定义一个全局函数，在所有的地方都能够访问得到
-	$rootScope.goTo = function(targetName){
-		$state.go(targetName)
-	}
 }]);
