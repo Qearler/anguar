@@ -49,7 +49,8 @@ myApp.run(['$rootScope', '$log','$state', '$transitions', function ($rootScope, 
   console.log('done')
 
   $transitions.onSuccess({}, function(transition) {
-    _hmt && _hmt.push(['_trackPageview', window.location.href]);
+    console.log(window.location.href);
+    _hmt && _hmt.push(['_trackPageview', '/new/path/new/name']);
     // URL必须是以"/"（斜杠）开头的相对路径, 如果是hash模式, 要在前面加 /#
     // _hmt && _hmt.push(['_trackPageview', '/#' + to.fullPath]);
     // console.log(transition);
