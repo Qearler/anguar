@@ -39,7 +39,7 @@ myApp.config(function($stateProvider) {
 
 
 myApp.run(function($http, $uiRouter) {
-  var Visualizer = window['ui-router-visualizer'].Visualizer;
-  $uiRouter.plugin(Visualizer);
+  // var Visualizer = window['ui-router-visualizer'].Visualizer;
+  // $uiRouter.plugin(Visualizer);
   // $http.get('data/people.json', { cache: true });
 });
