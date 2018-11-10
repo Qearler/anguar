@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="assets/angular.js"></script>
+    <script src="assets/angular.min.js"></script>
     <script src="assets/angular-ui-router.js"></script>
     
     <!--  Hello Galaxy Code -->
@@ -16,11 +16,11 @@
   </head>
   
   <body ng-app="hello" ng-class="{'debug-sref': debug.uisref, 'debug-view': debug.uiview}">
-    <div>
+    <!-- <div>
       <button onClick="document.location.reload(true)">reload plunker</button>
       <button ng-click="debug.uiview = !debug.uiview">{{ debug.uiview ? "disable" : "enable"}} ui-view debug</button>
       <button ng-click="debug.uisref = !debug.uisref">{{ debug.uisref ? "disable" : "enable"}} ui-sref debug</button>
-    </div>
+    </div> -->
     <div class="nav">
       <a ui-sref="hello" ui-sref-active="active">Hello</a>
       <a ui-sref="about" ui-sref-active="active">About</a>
