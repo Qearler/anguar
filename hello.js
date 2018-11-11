@@ -49,12 +49,22 @@ myApp.run(['$rootScope', '$log','$state', '$transitions', function ($rootScope, 
   console.log('done')
 
   $transitions.onSuccess({}, function(transition) {
-    console.log(window.location.href);
-    _hmt && _hmt.push(['_trackPageview', '/#' + '/new/path/new/name']);
+    // var _hmt = _hmt || [];
+    // (function () {
+    //   document.getElementById('baidu_tj') && document.getElementById('baidu_tj').remove();
+    //   var hm = document.createElement("script");
+    //   hm.id = "baidu_tj";
+    //   hm.src = "https://hm.baidu.com/hm.js?7383097449b3ddd3a09241d55a74d9c5";
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(hm, s);
+    // })();
+
+    console.log(window.location.hash);
+    _hmt && _hmt.push(['_trackPageview', '/' + window.location.hash]);
     // URL必须是以"/"（斜杠）开头的相对路径, 如果是hash模式, 要在前面加 /#
     // _hmt && _hmt.push(['_trackPageview', '/#' + to.fullPath]);
     // console.log(transition);
-    // console.log(transition.from());
+    console.log(transition.from());
     // console.log(
     //     "Successful Transition from " + transition.from().name +
     //     " to " + transition.to().name
