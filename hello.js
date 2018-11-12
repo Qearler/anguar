@@ -64,10 +64,13 @@ myApp.run(['$rootScope', '$log','$state', '$transitions', function ($rootScope, 
     // URL必须是以"/"（斜杠）开头的相对路径, 如果是hash模式, 要在前面加 /#
     // _hmt && _hmt.push(['_trackPageview', '/#' + to.fullPath]);
     // console.log(transition);
-    console.log(transition.from());
+    // console.log(transition.from());
     // console.log(
     //     "Successful Transition from " + transition.from().name +
     //     " to " + transition.to().name
     // );
+    // const url = window.location.href;
+    // const pageUrl = window.location.href.replace(window.location.protocol + '//' + window.location.host, '');
+    // 
   });
 }]);
